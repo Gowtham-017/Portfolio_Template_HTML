@@ -8,17 +8,21 @@ html{
     scroll-behavior: smooth;
 }
 .container{
-    padding: 10px 10px 0 30px;
+    margin-top: 0px;
+    position: fixed;
+    width: 100%;
 }
+/*-----------Navbar---------*/
 nav{
     background: #111;
-    display: flex;
+    padding: 5px 0 0 5px;
+    display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 nav ul li{
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 10px 20px 5px;
     cursor: pointer;
     color: #fff;
@@ -37,15 +41,16 @@ nav img{
     height: 70px;
     padding: 0 0 10px 0;
 }
-
-
+/*-----------Home---------*/
 #home{
     color: ababab;
 }
+.home{
+    padding-top: 20%;
+}
 .header-text{
-    margin-top: 10%;
     font-size: 30px;
-    padding: 0 0 0 50px;
+    padding: 0 0 0 30px;
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +66,6 @@ nav img{
     height: 500px;
     
 }
-
 /*-----------About---------*/
 #about{
     padding: 80px;
@@ -85,19 +89,21 @@ nav img{
     flex-basis: 60%;
     
 }
+p,span{
+    color:white;
+}
 .aboutme{
     font-size: 60px;
     font-weight: 600;
     color: #fff;
 }
 .aboutm{
+    color: #fff;
     font-size: 20px;
-
 }
 .titles{
     display: flex;
     margin: 20px 0 40px;
-    /* justify-content: space-between; */
 }
 .title1{
     margin-right: 50px;
@@ -114,7 +120,6 @@ nav img{
     left: 0;
     bottom: -8px;
     transition: 0.5s;
-
 }
 .title1.activetitle::after{
     width: 50%;;
@@ -128,13 +133,13 @@ nav img{
 }
 .tab-content{
     display: none;
+    color: white;
+    font-size: large;
 }
 .tab-content.activecontent{
     display: block;
 }
-
 /*-----------Project---------*/
-
 #project{
     padding: 80px;
     color: ababab;
@@ -173,10 +178,8 @@ nav img{
     font-weight: 300;
 }
 .projectlist div:hover{
-    /* background: #ff004f; */
     transform: translateY(-20px);
 }
-
 /*-----------Contact---------*/
 #contact{
     color: ababab;
@@ -185,7 +188,6 @@ nav img{
     padding: 100px;
     margin-top: 90px;
 }
-
 .left{
     flex-basis: 35%;
 }
@@ -253,7 +255,34 @@ form input, form textarea{
     color: white;
     margin-top: 10px;
     font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
 }
 .copyright p{
     background-color: #262626;
+}
+nav .fa-solid{
+    display: none;
+}
+@media only screen and(max-width :600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 13px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
 }
